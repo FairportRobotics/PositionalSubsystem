@@ -9,9 +9,9 @@ def outputsFolder = file("$buildDir/allOutputs")
 def versionFile = file("$outputsFolder/version.txt")
 
 def artifactGroupId = 'org.fairportrobotics.PositionalSubsystem'
-def baseArtifactId = 'PositionalSubsystem-lib'
-def zipBaseName = "_GROUP_org_fairportrobotics_PositionalSubsystem_ID_${baseArtifactId}-java_CLS"
-def javaBaseName = "_GROUP_org_fairportrobotics_PositionalSubsystem_ID_${baseArtifactId}-java_CLS"
+def baseArtifactId = 'positionalSubsystem-lib'
+def zipBaseName = "_GROUP_org_fairportrobotics_positionalSubsystem_ID_${baseArtifactId}-java_CLS"
+def javaBaseName = "_GROUP_org_fairportrobotics_positionalSubsystem_ID_${baseArtifactId}-java_CLS"
 
 def releasesRepoUrl = "$buildDir/repos/releases"
 
