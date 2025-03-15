@@ -1,7 +1,4 @@
-package lib.src.main.java.org.fairportrobotics.frc.PositionalSubsystem;
-
 import edu.wpi.first.wpilibj2.command.Command;
-import frc.robot.subsystems.I_PositionSubsystem;
 
 /**
  * T is some generic type that is either the position itself or a container to

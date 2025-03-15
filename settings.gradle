@@ -11,4 +11,4 @@ plugins {
 }
 
 rootProject.name = 'PositionalSubsystem'
-include('lib')
+include('src')

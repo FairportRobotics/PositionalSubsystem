@@ -1,3 +1,6 @@
 [submodule "lib"]
 	path = lib
 	url = https://github.com/FairportRobotics/Posty
+[submodule "lib/Posty"]
+	path = lib/Posty
+	url = https://github.com/FairportRobotics/Posty
