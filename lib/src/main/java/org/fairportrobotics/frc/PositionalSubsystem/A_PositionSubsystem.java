@@ -7,7 +7,16 @@ import edu.wpi.first.wpilibj2.command.Subsystem;
  * retrieve the position.
  * PositionSubsystem compliments the logic of PositionCommand.
  */
-public interface I_PositionSubsystem<T> extends Subsystem {
+public abstract class A_PositionSubsystem<T> extends TestableSubsystem {
+    /**
+     * Constructor for PositionSubsystem.
+     * 
+     * @param name is the name of the subsystem to be printed in the logs.
+     */
+    protected A_PositionSubsystem(String name) {
+        super(name);
+    }
+
     /**
      * Check if the subsystem can go to the desired position.
      * 
@@ -15,7 +24,7 @@ public interface I_PositionSubsystem<T> extends Subsystem {
      * @return true if the subsystem can go to the desired position, false
      *         otherwise.
      */
-    public boolean canGoToPosition(T checkPosition);
+    public abstract boolean canGoToPosition(T checkPosition);
 
     /**
      * Set the position of the subsystem.
@@ -23,17 +32,28 @@ public interface I_PositionSubsystem<T> extends Subsystem {
      * @param setPosition is the position to set the subsystem to.
      * @return true if the position was set successfully, false otherwise.
      */
-    public boolean setPosition(T setPosition);
+    public abstract boolean setPosition(T setPosition);
 
     /**
      * Check if the subsystem is at the desired position.
      * 
      * @return true if the subsystem is at the desired position, false otherwise.
      */
-    public boolean isAtPosition();
+    public abstract boolean isAtPosition();
 
     /**
      * Stops the motors of the subsystem.
      */
-    public void stopMotors();
+    public abstract void stopMotors();
+
+    /**
+     * Get a new PositionCommand with the desired position.
+     * 
+     * @param position is the desired position this new position command would set
+     *                 this subsystem to.
+     * @return a new PositionCommand with the desired position.
+     */
+    public PositionCommand<T> getNewPositionCommand(T position) {
+        return new PositionCommand<T>(this, position);
+    }
 }

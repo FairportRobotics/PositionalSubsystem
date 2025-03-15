@@ -1,4 +1,4 @@
-package frc.robot.commands;
+package lib.src.main.java.org.fairportrobotics.frc.PositionalSubsystem;
 
 import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.subsystems.I_PositionSubsystem;
@@ -11,11 +11,11 @@ import frc.robot.subsystems.I_PositionSubsystem;
  * functionality.
  */
 public class PositionCommand<T> extends Command {
-    protected I_PositionSubsystem<T> subsystem;
+    protected A_PositionSubsystem<T> subsystem;
     protected T position;
     private boolean isSuccessful = false;
 
-    public PositionCommand(I_PositionSubsystem<T> subsystem, T position) {
+    public PositionCommand(A_PositionSubsystem<T> subsystem, T position) {
         this.subsystem = subsystem;
         this.position = position;
     }
